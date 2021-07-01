@@ -10,8 +10,7 @@ namespace CourseZero.Classes.Homework.Generics
     /// <typeparam name="T">
     /// Любой тип данных, который может сравнивать себя с себеподобными
     /// </typeparam>
-    public class SortedQueue<T> : IEnumerable<T>
-        where T : IComparable<T>
+    public class SortedQueue<T> : IEnumerable<T>  where T : IComparable<T>
     {
         /// <summary>
         /// Конструктор
@@ -28,8 +27,14 @@ namespace CourseZero.Classes.Homework.Generics
         /// <param name="index">Порядковый номер элемента</param>
         public T this[int index]
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get
+            {
+                return default(T);
+            }
+            set
+            {
+
+            }
         }
 
         /// <summary>
@@ -84,6 +89,7 @@ namespace CourseZero.Classes.Homework.Generics
         /// </remarks>
         public override string ToString()
         {
+
             return base.ToString();
         }
     }
