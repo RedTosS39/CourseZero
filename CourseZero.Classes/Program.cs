@@ -11,6 +11,7 @@ namespace CourseZero.Classes
             ref int j = ref i;
             object o = i;
             object o1 = 1;
+            Console.WriteLine(2.3);
 
             Box b1 = new() { Value = 1 };
             Box b2 = b1;
@@ -20,26 +21,22 @@ namespace CourseZero.Classes
             string s2 = s1;
             s1.Replace("1", "9");
 
-            Stack<int> stack = new Stack<int>(1,2,4,6,0,9);
-            stack.Sort(CompareMethod);
-            Console.WriteLine(stack);
-            stack.RemoveAt(5);
-            Console.WriteLine("after removing on index 5");
-            Console.WriteLine(stack);
-            stack.RemoveAt(0);
-            Console.WriteLine("after removing on index 0");
-            Console.WriteLine(stack);
-            stack.RemoveAt(1);
-            Console.WriteLine("after removing on index 1");
+
+            Stack<char> stack = new Stack<char>();
+            bool continueInput;
+            do
+            {
+                Console.Write("Введите символ: ");
+                ConsoleKeyInfo key = Console.ReadKey();
+                Console.WriteLine();
+                continueInput = char.IsLetterOrDigit(key.KeyChar);
+                if (continueInput)
+                {
+                    stack.Add(key.KeyChar);
+                }
+            } while (continueInput);
             Console.WriteLine(stack);
             Console.ReadKey();
-
-            stack.Sort((i1, i2) => i1 - i2);
-            stack.RemoveAt(1);
-            Console.WriteLine("after removing on index 1");
-            Console.WriteLine(stack);
-            Console.ReadKey();
-
         }
 
         public static int CompareMethod(int i1, int i2)
