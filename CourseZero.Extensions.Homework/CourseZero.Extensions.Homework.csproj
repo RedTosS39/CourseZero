@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CourseZero.Classes.Library\CourseZero.Classes.Library.csproj" />
+    <ProjectReference Include="..\CourseZero.Extensions.Library\CourseZero.Extensions.Library.csproj" />
   </ItemGroup>
 
 </Project>
